@@ -11,6 +11,7 @@ Things that were missing to implement:
 - Some request validator (express-validator / ajv)
 - Test for basic scenarios
 - Page with list of queries and statistics
+- Upload the code to AWS, possibly I would have done it in AWS Amplify
 
 
 ## Regarding application's traffic
