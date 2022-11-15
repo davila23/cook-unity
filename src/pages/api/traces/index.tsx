@@ -51,7 +51,7 @@ await updateStatistics(enrichedData)
 res.status(200).json({body: enrichedData })
 
 } catch (error) {
-  res.status(500).json({statusCode: 500 , message: error.message})
+  res.status(500).json({statusCode: 500 , message: error?.message})
   }
 }
 

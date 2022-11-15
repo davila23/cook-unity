@@ -20,7 +20,8 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "resolveJsonModule": true,
-    "target": "es5",
+    "useUnknownInCatchVariables": false,
+    "target": "es6",
     "baseUrl": ".",
     "paths": {
       "@/*": [

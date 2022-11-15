@@ -14,6 +14,7 @@ export async function updateStatistics(domain? : DomainData) {
 
     if(countryIterations.size === 0) throw new Error('First, you must load some ips');
    
+    // @ts-ignore
     const sortCountryIterations = new Map([...countryIterations.entries()].sort((a, b) => b[1] - a[1]));
   
     const firstElement = sortCountryIterations.entries().next().value;
@@ -34,14 +35,14 @@ export async function updateStatistics(domain? : DomainData) {
 
   logger.info('[COOK-UNITY] => Updating statistics')
 
-  if(domain.distante_to_usa > maxDistance) {
+  if(domain && domain.distante_to_usa > maxDistance) {
       maxDistance=domain.distante_to_usa
       country= domain.name
    }
 
    count = count + 1
 
-   countryIterations.set(domain.name, countryIterations.get(domain.name) + 1 || 1);
+   countryIterations.set(domain?.name, countryIterations.get(domain?.name) + 1 || 1);
 
    logger.info('[COOK-UNITY] => Updated Country statistics: ' + [...countryIterations.entries()])
 }
