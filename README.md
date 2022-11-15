@@ -22,7 +22,9 @@ Place a queue in front of the api with a load-balancer and grow horizontally whe
 <img width="583" alt="Captura de Pantalla 2022-11-15 a la(s) 03 40 43" src="https://user-images.githubusercontent.com/50145471/201846680-1b53c389-f720-49d2-b255-699ffbe65fe5.png">
 
 2 - Code solution:
+
     - Enqueue the requests and execute them with a promise.all
+    
     - Use multithreading (spawn)
 
 ## Usage
